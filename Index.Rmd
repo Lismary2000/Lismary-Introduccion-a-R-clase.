@@ -9,7 +9,7 @@ output:
 ---
 
 <center>
-<img src="C:\Users\lisma\OneDrive\Course-6694\Webpage\mi foto 2.jpg" width="400" heigt="200"/>
+<img src="mi foto 2.jpg" width="400" heigt="200"/>
 </center>
 
 # _Hi, my name is Lismary!_
@@ -20,7 +20,7 @@ output:
 
 ## Hobbies
 <center>
--<img src="C:\Users\lisma\OneDrive\Course-6694\Webpage\dibujo1.jpg" width="200" heigt="100"/><img src="C:\Users\lisma\OneDrive\Course-6694\Webpage\pintura1.jpg"width="180" heigt="100"/><br>
+-<img src="dibujo1.jpg" width="200" heigt="100"/><img src="pintura1.jpg"width="180" heigt="100"/><br>
 </center>
 
 + **Art**
@@ -28,6 +28,7 @@ output:
   * Acrylic Painting 
   * Digital Art 
 + **Crochet**
+
 
 
 
