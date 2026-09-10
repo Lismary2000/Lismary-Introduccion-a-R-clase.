@@ -29,8 +29,6 @@ output:
   * Digital Art 
 + **Crochet**
 
-## R Chunk
-
 ```{r}
 
 ```
