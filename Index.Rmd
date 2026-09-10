@@ -13,7 +13,7 @@ output:
 </center>
 
 # _Hi, my name is Lismary!_
-## About me m 
+## About me m
 
 - I have a bachelor's degree in **_Biology_** with a concentration in **_Biomedical_** science. In August 2026, I began my **_Master's degree_** in Biology.<br><br>
 
