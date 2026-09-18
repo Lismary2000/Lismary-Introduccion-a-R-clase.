@@ -1,5 +1,5 @@
 ---
-title: "Primer R Markdown"
+title: "introducción a R"
 author: "Lismary Pérez Villanueva"
 date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
 output:
@@ -29,6 +29,7 @@ output:
   * Digital Art 
 + **Crochet**
 
+[Assigment 1](https://1drv.ms/u/c/0ecea373cb3e49be/IQDeAMI9g1ZlQZjXa3mFLYudAdkQMhab8CiMqjeGQZHjaek?e=BnwItBl)
 
 
 
