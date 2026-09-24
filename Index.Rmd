@@ -31,7 +31,7 @@ output:
 
 [Assigment 1](Assigment-1-R-class.html)
 
-[Assigment 2](Assigment 2.Rmd)
+[Assigment 2](Assigment-2.html)
 
 
 ```{r}
