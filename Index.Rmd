@@ -29,8 +29,8 @@ output:
   * Digital Art 
 + **Crochet**
 
-[Assigment 1](https://1drv.ms/u/c/0ecea373cb3e49be/IQDeAMI9g1ZlQZjXa3mFLYudAdkQMhab8CiMqjeGQZHjaek?e=BnwItBl)
-
+[Assigment 1](Assigment-1-R-class.html)
+[Assigment 2]()
 
 
 ```{r}
