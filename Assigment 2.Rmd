@@ -4,27 +4,76 @@ author: "Lismary Perez Villamueva"
 date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
 output: html_document
 ---
+---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 ```
 
-## R Markdown
+### Assigning values
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r}
+library(dplyr)
+library(gapminder)
+data(gapminder)
+head(gapminder)
 ```
+### Q1. What class is the gapminder dataset? Q1. ¿Qué clase es el dataset gapminder?
 
-## Including Plots
+```{r}
+# ?gapminder
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
 ```
+- Excerpt of the Gapminder data on life expectancy, GDP per capita, and population by country. `
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### Q2. Filter a section of gapminder with a life expectancy smaller than 29. Q2. Filtrar una sección de gapminder con esperanza de vida menor a 29.
+```{r}
+ gapminder |>
+  filter(lifeExp < "29")
+
+```
+#### Q3 Filter the dataset for the country Rwanda and for years greater than 1979. Q3 Filtrar el dataset para el país Ruanda y para años mayores a 1979.
+```{r}
+ gapminder |>
+  filter(country == "Rwanda" ,year > "1979")
+
+```
+### Q4Create a new dataset from gapminder excluding the column gdpPercap. Q4 Crear un nuevo dataset a partir de gapminder excluyendo la columna gdpPercap.
+```{r}
+ gapminder_new <- gapminder |> 
+  select(-gdpPercap)
+gapminder_new
+```
+### Q5 Arrange the dataset in ascending order of lifeExp.Q5 Ordenar el dataset en orden ascendente según lifeExp.
+```{r}
+gapminder |> arrange(lifeExp)
+
+```
+### Q6 Arrange the dataset in descending order of lifeExp. Q6 Ordenar el dataset en orden descendente según lifeExp.
+```{r}
+gapminder |> arrange(desc(lifeExp))
+
+```
+### Q7 Create a new dataset with only the columns year and lifeExp. Q7 Crear un nuevo dataset con solo las columnas year y lifeExp.
+```{r}
+gapminder |> 
+select(lifeExp)
+```
+### Q8 Filter the dataset for the country Cambodia and show only the columns year and lifeExp. Q8 Filtrar el dataset para el país Camboya y mostrar únicamente las columnas year y lifeExp.
+```{r}
+gapminder_cambodia <- gapminder |>
+  filter(country == "Cambodia") |> 
+  select(year, lifeExp)
+gapminder_cambodia
+```
+### Q9. Select only the countries in Africa. Q9. Seleccionar únicamente los países que están en África.
+```{r}
+gapminder |> filter(continent == "Africa")
+```
+### Q10. Create a new column called lifeExp_months that shows life expectancy in months. Q10. Crear una nueva columna llamada lifeExp_months que muestre la esperanza de vida en meses.
+```{r}
+gapminder_months<- gapminder |>
+mutate(lifeExp_months = lifeExp * 12)
+gapminder_months
+
