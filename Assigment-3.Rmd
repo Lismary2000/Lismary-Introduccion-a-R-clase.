@@ -1,0 +1,69 @@
+---
+title: "Assigment 2"
+author: "Lismary Perez Villamueva"
+date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+output: html_document
+---
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+```{r}
+library(ggplot2)
+data("trees")
+head(trees)
+```
+### Q1. Create a histogram showing the distribution of Girth.
+### Q1. Cree un histograma que muestre la distribución de Girth.
+```{r}
+ggplot(data = trees,
+aes(x = Girth)) +
+  geom_histogram(fill = "darkgreen", color = "black") +
+  labs(title = "Tree Diameter Distribution(Girth)",
+       x = "Diameter (Girth)",
+       y = "Frequency") +
+  theme(legend.position = 'none')
+```
+
+### Q2. Create a histogram showing the distribution of Volume.
+### Q2. Cree un histograma que muestre la distribución de Volume.
+
+```{r}
+ggplot(data = trees,
+aes(x = Volume)) +
+  geom_histogram(fill = "pink", color = "darkred") +
+  labs(title = "Tree Volume Distribution(Volume)",
+       x = "Volumen",
+       y = "Frequency") +
+  theme(legend.position = 'none')
+```
+### Q3. Create a scatterplot showing the relationship between Girth and Volume.
+### Q3. Cree un gráfico de dispersión que muestre la relación entre Girth y Volume.
+```{r}
+ggplot(data = trees,
+aes(x= Girth, y= Volume)) +
+  geom_point(color = "darkgreen", size = 2.0, alpha = 0.5) +
+  labs(title = "Tree Distribution of Diameter and Volume",
+       x = "Diameter (Girth)",
+       y = "Volumen (Volume)") +
+  theme(legend.position = 'none')
+```
+
+### Q4. Use the Shapiro–Wilk test to assess whether Volume is normally distributed. Report the p-value and state whether the data are normally distributed.
+### Q4. Utilice la prueba de Shapiro–Wilk para evaluar si Volume tiene una distribución normal. Reporte el valor de p e indique si los datos tienen una distribución normal  
+
+```{r}
+shapiro.test(trees$Volume)
+# The p-value is less than 0.05; therefore, the data are not normally distributed.
+```
+### Q5. Repeat the Shapiro–Wilk test for Girth. Report the p-value and state whether Girth is normally distributed.
+### Q5. Repita la prueba de Shapiro–Wilk para Girth. Reporte el valor de p e indique si los datos tienen una distribución normal.
+
+
+```{r}
+shapiro.test(trees$Girth)
+# The p-value is greater than 0.05; therefore, the data do follow a normal distribution.
+```
