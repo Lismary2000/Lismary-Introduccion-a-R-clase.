@@ -1,0 +1,22 @@
+---
+title: "Exam 1"
+author: "Lismary Perez Villamueva"
+date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+```
+
+
+```{r cars}
+
+```
+
+
+
+```{r pressure, echo=FALSE}
+
+```
+
