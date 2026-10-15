@@ -36,7 +36,7 @@ output:
 [Assigment 3](Assigment-3.html)
 
 + **Exam** 
-   * [Exam 1]( ) 
+   * [Exam 1](Exam-1.html) 
 
 ```{r}
 
